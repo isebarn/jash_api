@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  textile_api:
+    image: textile_api
+    container_name: textile_api
+    restart: always
+    environment:
+      WEB: https://textileweb.isebarn.com
+      DB_USER: root
+      DB_PWD: root
+      DB_HOST: mongodb://192.168.31.16
+      DB_NAME: textile
+    volumes:
+      - ./api/:/app
+    expose:
+      - "1069"
+    ports:
+      - 1069:1069
+
+
+
