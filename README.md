@@ -74,3 +74,19 @@ You must have the `.env` file configured
 	    "phone_number": "1309513058"
 	  }
 	]	
+
+# Docker building
+Run the following
+
+        docker build  -t textile_api .
+
+From within the directory
+
+Then, edit `docker-compose.yml`, set the environment variables properly
+
+Then run
+
+        docker-compose up
+
+To start the container, it is configured for port 1069, to change the port, you must edit the `Dockerfile` and rebuild the image and edit the `docker-compose.yml` file
+
